@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  pitaya-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/go/src/github.com/lucianopc/pitaya-cli
+    environment:
+        PITAYACLI_HISTORY_PATH: /go/src/github.com/lucianopc/pitaya-cli/.pitayacli_history
